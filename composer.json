@@ -3,10 +3,7 @@
   	"description": "A WooCommerce Address Autocomplete plugin for Checkout and Account Addresses",
   	"type": "wordpress-plugin",
   	"version": "1.0.0",
-  	"license": [
-		"MIT",
-		"GPL-2.0-or-later"
-  	],
+  	"license": "GPLv2-or-later",
 	"authors": [
 		{
 			"name": "Mastersoft",
@@ -26,6 +23,7 @@
   		"address", 
   		"address validation", 
   		"autocomplete", 
-  		"address autocomplete" 
+  		"address autocomplete", 
+  		"checkout" 
   	]
 }

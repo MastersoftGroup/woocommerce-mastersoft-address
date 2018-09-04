@@ -1,12 +1,12 @@
 <?php
 /**
 * Plugin Name:  Mastersoft Address
-* Plugin URI:   https://hosted.mastersoftgroup.com/console/#/
-* Description:  Woocommerce address autocomplete plugin for AU and NZ
+* Plugin URI:   https://github.com/MastersoftGroup/woocommerce-mastersoft-address
+* Description:  AU and NZ Address autocomplete plugin for WooCommerce Checkout and Account Addresses
 * Version:      0.1
 * Author:       Mastersoft
 * Author URI:   https://www.mastersoftgroup.com/
-* License:      GPL2
+* License:      GPLv2 or later
 * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 **/ 
 
