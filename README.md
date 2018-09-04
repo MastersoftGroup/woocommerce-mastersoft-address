@@ -106,6 +106,12 @@ Currently these Source of Truth are available for AUSTRALIA: `AUPAF`, `GNAF` and
 
 You can get the full list of `FeatureOptions` [here](http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption).
 
+### Why the Region for New Zealand is not auto-selected after selecting an address?
+
+New Zealand Region will only be selected if Source of Truth is NZAD and `exposeAttributes` is turned on. 
+
+Go to `Mastersoft Address` WooCommerce Settings in your WordPress Admin and change `Widget Options for NEW ZEALAND` value to `{ sot: "NZAD", exposeAttributes: "1" }`. 
+
 ### Where can I report bugs or have further questions to ask?
 
 Any questions or bugs can be reported either by opening an issue on [Mastersoft GitHub](https://github.com/MastersoftGroup/mastersoft-address-woocommerce/issues). 
