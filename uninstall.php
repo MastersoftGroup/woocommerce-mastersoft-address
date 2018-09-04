@@ -16,6 +16,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 
 global $wpdb;
 
-// Delete options
+// Delete mastersoft settings in options
 $wpdb->query("DELETE FROM $wpdb->options WHERE option_name LIKE 'wc_mastersoft_settings_tab_%';");
 
+?>
