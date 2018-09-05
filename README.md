@@ -31,15 +31,30 @@ Currently automatic installation is not available.
 		**OR**		   
 	1.	Upload the zip file via your WordPress Admin URL: 
 		Log in to your WordPress Admin > go to `Plugins` > `Add New` > `Upload Plugin` button > upload the zip file
-1. 	If the zip file is uploaded manually to `WP_ROOT/wp-content/plugings/` (option 1), make sure all files are owned by `www-data`:  
-	In `woocommerce-mastersoft-address` directory > ``` chown -R www-data:www-data * ``` 
 		
 ### Composer installation
 
 It is available in [Packagist](https://packagist.org/packages/mastersoft/woocommerce-mastersoft-address).
 
-Run composer command: ```composer require mastersoft/woocommerce-mastersoft-address```		
-		    
+1. Download and install composer.
+   ```
+   curl -sS https://getcomposer.org/installer | php
+   mv composer.phar /usr/local/bin/compose
+   ```
+2. Create `composer.json` file in the `WP_ROOT` and add `mastersoft/woocommerce-mastersoft-address` package. 	
+   For example to add `woocommerce-mastersoft-address` v1.0.0.
+   ```
+   {	
+       "require": {
+           "mastersoft/woocommerce-mastersoft-address": "1.0.0"
+       }
+   }	
+   ```	
+   Alternatively if you can use composer command: ```composer require mastersoft/woocommerce-mastersoft-address:<version>``` - `<version>` is optional.
+3. Install the package: ```composer install```			
+
+Under WordPress plugins directory, there should be `woocommerce-mastersoft-address` directory with its file contents and file structures the same as in GitHub.
+
 ### Post installation
 
 1. Activate plugin: go to `Plugins` page in your WordPress Admin > click `Activate` on `Mastersoft Address` plugin
@@ -47,8 +62,10 @@ Run composer command: ```composer require mastersoft/woocommerce-mastersoft-addr
 	
 ### Updating existing Composer installation
 
-1. Update `./composer.json` with the version to be downloaded: ```composer require mastersoft/woocommerce-mastersoft-address:<version> --no-update```
-1. Download and install the specific `mastersoft/woocommerce-mastersoft-address` version: `composer update`
+1. Update `composer.json` in your WordPress plugins directory with the version to be downloaded: 
+   ```composer require mastersoft/woocommerce-mastersoft-address:<version> --no-update```
+   Alternatively you can also update the version of `mastersoft/woocommerce-mastersoft-address` package in the `composer.json` file directly.
+1. Download and install the updated version of `mastersoft/woocommerce-mastersoft-address`: ```composer update```
 
 ### Disable/enable plugin
 
