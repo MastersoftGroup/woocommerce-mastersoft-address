@@ -69,7 +69,7 @@ Under WordPress plugins directory, there should be `woocommerce-mastersoft-addre
 
 ### Disable/enable plugin
 
-To disable: log in to your WordPress Admin > go to `Plugins` > click `Deactivate` to disable plugin (click `Activate` to enable plugin).  
+To disable: log in to your WordPress Admin > go to `Plugins` > click `Deactivate` to disable plugin (click `Activate` to enable plugin). 
 
 This will disable the functionality but will still keep all your configuration settings, so you do not need to configure when you enable the plugin again. 
 
@@ -77,7 +77,9 @@ This will disable the functionality but will still keep all your configuration s
 
 Log in to your WordPress Admin > go to `Plugin` > click `Deactivate` and `Delete`. 
 
-This will uninstall and delete all the configuration settings in your database.  
+This will uninstall and delete all the configuration settings in your database. 
+
+If during deleting process, there is an error message `Could not fully remove the plugin ....`, please make sure the file ownership is set to `www-data`: in your WordPress plugins directory, ```chown -R www-data:www-data woocommerce-mastersoft-address```. 
 
 ## Configuration
 
