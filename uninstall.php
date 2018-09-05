@@ -6,14 +6,10 @@
  * It will clean up options for settings in the database.
  */
 
-// if uninstall.php is not called by WordPress, die
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
     die;
 }
  
-//$option_name = 'wporg_option'; 
-//delete_option($option_name);
-
 global $wpdb;
 
 // Delete mastersoft settings in options

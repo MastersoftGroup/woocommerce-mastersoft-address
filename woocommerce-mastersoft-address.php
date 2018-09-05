@@ -16,7 +16,6 @@
 * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 **/
 
-//defined( 'ABSPATH' ) || exit;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -26,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  **/
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
-	if( ! function_exists( 'load_mastersoft_address_scripts' ) ) {	//best practice from wordpress
+	if( ! function_exists( 'load_mastersoft_address_scripts' ) ) {	
 
 		function load_mastersoft_address_scripts() {
 			
@@ -34,59 +33,53 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				plugins_url('js/mastersoft-woocommerce.js', __FILE__), 
 				array('jquery', 'jquery-ui-core', 'jquery-ui-autocomplete'));	
 
-			//get nz regions defined in wc
+			// Retrieve NZ Regions defined in WooCommerce
 			$countries_obj = new WC_Countries();
 			$nz_regions = $countries_obj->get_states('NZ');
 			foreach($nz_regions as $x => $x_value) {
-				/*	
-				decoded (eg '&rsquo;' to '''), uppercase and only keep letters/numbers, eg "Hawke&rsquo;s Bay" -> "HAWKE'S BAY" -> "HAWKESBAY"
-				because in nzad, some region names can have different punctuations than in woocommerce, eg. "Hawke's Bay" vs "Hawkes Bay"
-				*/
 				$x_value_decode_upper = strtoupper(html_entity_decode($x_value));
-				$nz_regions[$x] = preg_replace('/[^a-zA-Z0-9]+/i', '', $x_value_decode_upper);	//somehow reg_replace only accept simple var, not nested fn in var
+				$nz_regions[$x] = preg_replace('/[^a-zA-Z0-9]+/i', '', $x_value_decode_upper);
 			}
-	 
-			//var_dump($nz_regions);	//see this in view page source
 
 			$dataToBePassed = array(
 				'licenceKey' 		=> get_option('wc_mastersoft_settings_tab_licence_key'),
-				'url' 				=> get_option('wc_mastersoft_settings_tab_url'),	//can also pass on default value: get_option('option_name', 'default_value')
+				'url' 				=> get_option('wc_mastersoft_settings_tab_url'),
 				'widgetOptions' 	=> get_option('wc_mastersoft_settings_tab_widget_options'),
 				'widgetOptionsAu' 	=> get_option('wc_mastersoft_settings_tab_widget_options_au'),
 				'widgetOptionsNz' 	=> get_option('wc_mastersoft_settings_tab_widget_options_nz'),
-				'nzRegionsValKey' 	=> array_flip($nz_regions)	//flip key,val to val,key
+				'nzRegionsValKey' 	=> array_flip($nz_regions)	
 			);
 		
 			wp_localize_script('mastersoft-woocommerce', 'php_vars', $dataToBePassed);
-
 			wp_enqueue_script('harmony', 'https://s3-ap-southeast-2.amazonaws.com/common.mastersoftgroup.com/scripts/harmony-current.min.js');
 			wp_enqueue_style('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css');
 		}
-	}
+	}	
 	
 	add_action( 'woocommerce_after_checkout_form', 'load_mastersoft_address_scripts' );
 	add_action( 'woocommerce_after_edit_address_form_billing', 'load_mastersoft_address_scripts' );
 	add_action( 'woocommerce_after_edit_address_form_shipping', 'load_mastersoft_address_scripts' );
 
-	//in admin mode: include mastersoft settings in the woocommerce admin settings
+	// Include Mastersoft Settings in the WooCommerce Admin Settings
 	if( is_admin() ) {
-		include_once( plugin_dir_path( __FILE__ ) . 'admin/woocommerce-mastersoft-settings.php' );	//relative to this current file
+		include_once( plugin_dir_path( __FILE__ ) . 'admin/woocommerce-mastersoft-settings.php' );
 	}
 	
-    //add some links for Mastersoft Address plugin on WordPress Plugins page.
+    // Add some links for Mastersoft Address plugin in WordPress Plugins page
     function plugin_add_action_links ( $links ) {
-        //add Docs link to GitHub URL
+	
+        // Add Docs link to GitHub URL
         $docs_link = '<a href="https://github.com/MastersoftGroup/woocommerce-mastersoft-address" target="_blank">Docs</a>';
         array_unshift( $links, $docs_link );
 
-        //add Settings link to Mastersoft Address tab Settings
+        // Add Settings link to Mastersoft Address tab Settings
         $url = get_admin_url() . 'admin.php?page=wc-settings&tab=mastersoft_settings_tab';
         $settings_link = '<a href="' . $url . '">' . __( 'Settings', 'textdomain' ) . '</a>';
         array_unshift( $links, $settings_link );
 
         return $links;
     }
-
+	
     add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'plugin_add_action_links' );	
 }
 ?>

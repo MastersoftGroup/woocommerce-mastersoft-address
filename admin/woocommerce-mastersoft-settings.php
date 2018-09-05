@@ -41,11 +41,6 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 		 * Get all the settings for this plugin for @see woocommerce_admin_fields() function.
 		 */
 		public static function get_settings() {
-			/* default settings:		
-				username: undefined, password: undefined, url: 'https://hosted.mastersoftgroup.com', 
-				AU: { locale: Harmony.AUSTRALIA, sot: Harmony.GNAF, featureOptions: { singleLineHitNumber: 5, caseType: "TITLE" } },
-				NZ: { locale: Harmony.NEW_ZEALAND, sot: Harmony.NZAD, featureOptions: { singleLineHitNumber: 5, caseType: "TITLE", exposeAttributes: "1" } }	
-			*/
 			$settings = array(
 				'section_title' => array(
 					'title'		=> __( 'Mastersoft Address', 'woocommerce-mastersoft-settings-tab' ),
