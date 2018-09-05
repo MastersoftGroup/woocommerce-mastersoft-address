@@ -2,7 +2,7 @@
 Contributors: Mastersoft
 Tags: wordpress, woocommerce, wordpress plugin, woocommerce plugin, mastersoft, address, address validation, autocomplete, address autocomplete, checkout
 Requires at least: 4.6
-Tested up to: 4.9.8 (woocommerce 3.4.4)
+Tested up to: 4.9.8 (WooCommerce 3.4.5)
 Stable tag: 1.0
 Requires PHP: 5.2.4
 License: GPLv2 or later
@@ -39,19 +39,43 @@ Currently automatic installation is not available.
 		**OR**		   
 	1.	Upload the zip file via your WordPress Admin URL: 
 		Log in to your WordPress Admin > go to `Plugins` > `Add New` > `Upload Plugin` button > upload the zip file
-1. 	If the zip file is uploaded manually to `WP_ROOT/wp-content/plugings/` (option 1), make sure all files are owned by `www-data`:  
-	In `woocommerce-mastersoft-address` directory > ``` chown -R www-data:www-data * ``` 
 		
 = Composer installation =
 
 It is available in [Packagist](https://packagist.org/packages/mastersoft/woocommerce-mastersoft-address).
 
-Run composer command: ```composer require mastersoft/woocommerce-mastersoft-address```		
-		    
+1.	Download and install composer.
+	```
+	curl -sS https://getcomposer.org/installer | php
+	mv composer.phar /usr/local/bin/compose
+	```
+1.	Create `composer.json` file in the `WP_ROOT` and add `mastersoft/woocommerce-mastersoft-address` package. 
+	
+	For example to add `woocommerce-mastersoft-address` v1.0.0.
+	```
+	{	
+		"require": {
+			"mastersoft/woocommerce-mastersoft-address": "1.0.0"
+		}
+	}	
+	```        
+
+    Alternatively if you can use composer command: ```composer require mastersoft/woocommerce-mastersoft-address:<version>``` - `<version>` is optional.
+1.	Install the package: ```composer install```.
+
+Under WordPress plugins directory, there should be `woocommerce-mastersoft-address` directory with its file contents and file structures the same as in GitHub.		
+			    
 = Post installation =
 
-1. Activate plugin: go to `Plugins` page in your WordPress Admin > click `Activate` on `Mastersoft Address` plugin
+1. Activate plugin: go to `Plugins` page in your WordPress Admin > click `Activate` on `Mastersoft Address` plugin.
 1. Configure plugin in `Mastersoft Address` settings tab - see `Configuration` section for more detail.
+
+= Updating existing Composer installation =
+
+1. 	Update `composer.json` in your WordPress plugins directory with the version to be downloaded: 
+	```composer require mastersoft/woocommerce-mastersoft-address:<version> --no-update```
+	Alternatively you can also update the version of `mastersoft/woocommerce-mastersoft-address` package in the `composer.json` file directly.
+1. 	Download and install the updated version of `mastersoft/woocommerce-mastersoft-address`: ```composer update```
 
 = Configuration =
 
@@ -82,11 +106,6 @@ Log in to your WordPress Admin > go to `WooCommerce` > `Settings` > `Mastersoft 
 	Pre-configured and default value: `{ sot: "NZAD", exposeAttributes: "1" }`.
 	
 All Widget Options must be in valid JSON format. To configure the Widget Options, here is the full list of available [FeatureOption](http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption).
-	
-= Updating existing Composer installation =
-
-1. Update `./composer.json` with the version to be downloaded: ```composer require mastersoft/woocommerce-mastersoft-address:<version> --no-update```
-1. Download and install the specific `mastersoft/woocommerce-mastersoft-address` version: `composer update`
 
 = Disable/enable plugin =
 
@@ -114,6 +133,12 @@ Currently these Source of Truth are available for AUSTRALIA: `AUPAF`, `GNAF` and
 
 You can get the full list of `FeatureOptions` [here](http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption).
 
+= Why the Region for New Zealand is not auto-selected after selecting an address? =
+
+New Zealand Region will only be selected if Source of Truth is `NZAD` and `exposeAttributes` is turned on. 
+
+Go to `Mastersoft Address` WooCommerce Settings in your WordPress Admin and change `Widget Options for NEW ZEALAND` value to `{ sot: "NZAD", exposeAttributes: "1" }`. 
+
 = Where can I report bugs or have further questions to ask? =
 
 Any questions or bugs can be reported either by opening an issue on [Mastersoft GitHub](https://github.com/MastersoftGroup/mastersoft-address-woocommerce/issues). 
@@ -124,7 +149,15 @@ Alternatively you can contact us via e-mail to <support@mastersoftgroup.com> or 
 
 You can find the documentation of our REST API [here](http://developer.mastersoftgroup.com/harmony/api/).
 
+== Screenshots ==
+
+1. Mastersoft Address Plugin Settings
+
 == Changelog ==
+
+Please see [here](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/releases) for release history on GitHub.
+
+== Upgrade Notice ==
 
 Please see [here](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/releases) for release history on GitHub.
 

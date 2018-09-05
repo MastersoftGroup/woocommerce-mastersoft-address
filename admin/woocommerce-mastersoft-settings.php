@@ -52,13 +52,6 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 					'type'		=> 'title',
 					'desc'		=> 'Get started with a FREE licence key - https://hosted.mastersoftgroup.com/console/#/.',
 					'id'		=> 'wc_mastersoft_settings_tab_section_title'
-				),			
-				'enable' => array( 
-					'title' 	=> __( 'Enable/Disable', 'woocommerce-mastersoft-settings-tab' ),
-					'type'		=> 'checkbox',
-					'desc'		=> __( 'Enable Mastersoft Address', 'woocommerce-mastersoft-settings-tab' ),
-					'id'		=> 'wc_mastersoft_settings_tab_enable',
-					'default'	=> 'yes'
 				),
 				'licence_key' => array(
 					'title'		=> __( 'Licence Key', 'woocommerce-mastersoft-settings-tab' ),

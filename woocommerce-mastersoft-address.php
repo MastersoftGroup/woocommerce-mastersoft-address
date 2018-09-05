@@ -3,12 +3,18 @@
 * Plugin Name:  Mastersoft Address
 * Plugin URI:   https://github.com/MastersoftGroup/woocommerce-mastersoft-address
 * Description:  AU and NZ Address autocomplete plugin for WooCommerce Checkout and Account Addresses
-* Version:      0.1
+* Version:      1.0.0
 * Author:       Mastersoft
 * Author URI:   https://www.mastersoftgroup.com/
-* License:      GPLv2 or later
+* Developer:    Yulie Sandjojo/Mastersoft
+* Text Domain:  woocommerce-extension
+*
+* WC tested up to: 3.4.5
+*
+* Copyright:    @ 2018 Mastersoft
+* License:      GNU General Public License v2.0 or later
 * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
-**/ 
+**/
 
 //defined( 'ABSPATH' ) || exit;
 if ( ! defined( 'ABSPATH' ) ) {
@@ -66,5 +72,21 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	if( is_admin() ) {
 		include_once( plugin_dir_path( __FILE__ ) . 'admin/woocommerce-mastersoft-settings.php' );	//relative to this current file
 	}
+	
+    //add some links for Mastersoft Address plugin on WordPress Plugins page.
+    function plugin_add_action_links ( $links ) {
+        //add Docs link to GitHub URL
+        $docs_link = '<a href="https://github.com/MastersoftGroup/woocommerce-mastersoft-address" target="_blank">Docs</a>';
+        array_unshift( $links, $docs_link );
+
+        //add Settings link to Mastersoft Address tab Settings
+        $url = get_admin_url() . 'admin.php?page=wc-settings&tab=mastersoft_settings_tab';
+        $settings_link = '<a href="' . $url . '">' . __( 'Settings', 'textdomain' ) . '</a>';
+        array_unshift( $links, $settings_link );
+
+        return $links;
+    }
+
+    add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'plugin_add_action_links' );	
 }
 ?>
