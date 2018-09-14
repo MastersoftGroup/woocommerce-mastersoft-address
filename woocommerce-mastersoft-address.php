@@ -63,10 +63,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	// Include Mastersoft Settings in the WooCommerce Admin Settings
 	if( is_admin() ) {
 		include_once( plugin_dir_path( __FILE__ ) . 'admin/woocommerce-mastersoft-settings.php' );
+        include_once( plugin_dir_path( __FILE__ ) . 'admin/woocommerce-mastersoft-notices.php' );
 	}
 	
     // Add some links for Mastersoft Address plugin in WordPress Plugins page
-    function plugin_add_action_links ( $links ) {
+    function mastersoft_add_plugin_action_links ( $links ) {
 	
         // Add Docs link to GitHub URL
         $docs_link = '<a href="https://github.com/MastersoftGroup/woocommerce-mastersoft-address" target="_blank">Docs</a>';
@@ -80,6 +81,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         return $links;
     }
 	
-    add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'plugin_add_action_links' );	
+    add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'mastersoft_add_plugin_action_links' );
 }
 ?>

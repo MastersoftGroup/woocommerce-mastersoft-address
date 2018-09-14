@@ -149,10 +149,6 @@ Alternatively you can contact us via e-mail to <support@mastersoftgroup.com> or 
 
 You can find the documentation of our REST API [here](http://developer.mastersoftgroup.com/harmony/api/).
 
-== Screenshots ==
-
-1. Mastersoft Address Plugin Settings
-
 == Changelog ==
 
 Please see [here](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/releases) for release history on GitHub.

@@ -48,11 +48,24 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 					'desc'		=> 'Get started with a FREE licence key - https://hosted.mastersoftgroup.com/console/#/.',
 					'id'		=> 'wc_mastersoft_settings_tab_section_title'
 				),
+                'console_button' => array(
+                    'title'     => __( 'Log in or sign up now' ),
+                    'name'      => __( 'Get your Licence Key' ),
+                    'type'      => 'button',
+                    'desc'      => __( 'Get your Licence Key now', 'woocommerce-mastersoft-settings-tab' ),
+                    'class'     => 'button-primary',
+                    'id'        => 'wc_mastersoft_settings_tab_console_button',
+                    'desc_tip'  => true,
+                    'custom_attributes' => array(
+                        'onclick' => "window.open('https://hosted.mastersoftgroup.com/console/#/signUp', '_blank')"
+                    )
+                ),
 				'licence_key' => array(
 					'title'		=> __( 'Licence Key', 'woocommerce-mastersoft-settings-tab' ),
 					'type'		=> 'text',
 					'desc'		=> __( 'Must be in [username-without-domain:password] format.', 'woocommerce-mastersoft-settings-tab' ),
-					'id'		=> 'wc_mastersoft_settings_tab_licence_key'
+                    'id'        => 'wc_mastersoft_settings_tab_licence_key',
+                    'placeholder' => 'Get your Licence Key'
 				),
 				'url' => array(
 					'title'		=> __( 'URL', 'woocommerce-mastersoft-settings-tab' ),
@@ -91,5 +104,36 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 			return apply_filters( 'wc_mastersoft_settings_tab_settings', $settings );
 		}
 	}
-	WC_Mastersoft_Settings_Tab::init();
 }
+function mastersoft_add_admin_field_button( $value ) {
+    $option_value = (array) WC_Admin_Settings::get_option( $value['id'] );
+    $description = WC_Admin_Settings::get_field_description( $value );
+
+    ?>
+    <tr valign="top">
+        <th scope="row" class="titledesc">
+            <label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
+            <?php echo  $description['tooltip_html'];?>
+        </th>
+
+        <td class="forminp forminp-<?php echo sanitize_title( $value['type'] ) ?>">
+            <input
+                name    = "<?php echo esc_attr( $value['name'] ); ?>"
+                id      = "<?php echo esc_attr( $value['id'] ); ?>"
+                type    = "button"
+                style   = "<?php echo esc_attr( $value['css'] ); ?>"
+                value   = "<?php echo esc_attr( $value['name'] ); ?>"
+                class   = "<?php echo esc_attr( $value['class'] ); ?>"
+                onclick = "<?php echo $value['custom_attributes']['onclick']; ?>"
+            />
+            <?php echo $description['description']; ?>
+        </td>
+    </tr>
+    <?php
+}
+
+add_action( 'woocommerce_admin_field_button', 'mastersoft_add_admin_field_button' );
+
+WC_Mastersoft_Settings_Tab::init();
+
+?>
