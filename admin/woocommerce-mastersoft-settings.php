@@ -45,7 +45,7 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 				'section_title' => array(
 					'title'		=> __( 'Mastersoft Address', 'woocommerce-mastersoft-settings-tab' ),
 					'type'		=> 'title',
-					'desc'		=> 'Get started with a FREE licence key - https://hosted.mastersoftgroup.com/console/#/.',
+					'desc'		=> 'Get started with a FREE Trial licence key - https://hosted.mastersoftgroup.com/console/#/.',
 					'id'		=> 'wc_mastersoft_settings_tab_section_title'
 				),
                 'console_button' => array(

@@ -20,7 +20,7 @@ Features:
 * Only enabled when country is selected as Australia or New Zealand
 * Settings for Mastersoft Address, such as Source of Truth
 
-Get started with a FREE licence key [here](https://hosted.mastersoftgroup.com/console/#/).
+Get started with a FREE Trial licence key [here](https://hosted.mastersoftgroup.com/console/#/).
 
 == Installation ==
 
@@ -83,7 +83,7 @@ Log in to your WordPress Admin > go to `WooCommerce` > `Settings` > `Mastersoft 
 
 * 	**Licence Key** (mandatory) 	
 	
-	**Get your FREE licence key [here](https://hosted.mastersoftgroup.com/console/#/).**			
+	**Get your FREE Trial licence key [here](https://hosted.mastersoftgroup.com/console/#/).**			
 	Must be in **username-without-domain:password** format. Default value: blank/empty.
 					 
 *	**URL**	
@@ -123,7 +123,7 @@ This will uninstall and delete all the configuration settings in your database.
 
 = How to get the licence key? =
 
-You can get a FREE licence key [here](https://hosted.mastersoftgroup.com/console/#/) and start using it right away.
+You can get a FREE Trial licence key [here](https://hosted.mastersoftgroup.com/console/#/) and start using it right away.
 
 = What are all available Widget Options to configure in the settings? =
 
