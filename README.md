@@ -145,6 +145,12 @@ You can find the documentation of our REST API [here](http://developer.mastersof
 
 Please see [here](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/releases) for release history on GitHub.
 
-## Copyright
+## Support
+If you have any questions or issues with this module, open an issue on [GitHub](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/issues). Alternatively you can contact us via e-mail or via our website below.
 
-(c) 2018 Mastersoft
+E-mail: <msg.support@gbgplc.com>  
+Homepage: <https://www.mastersoftgroup.com/>
+
+
+## Copyright
+(c) 2020 Mastersoft
