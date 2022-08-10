@@ -3,15 +3,15 @@
 * Plugin Name:  Mastersoft Address
 * Plugin URI:   https://github.com/MastersoftGroup/woocommerce-mastersoft-address
 * Description:  AU and NZ Address autocomplete plugin for WooCommerce Checkout and Account Addresses
-* Version:      1.0.1
+* Version:      1.1.0
 * Author:       Mastersoft
 * Author URI:   https://www.mastersoftgroup.com/
 * Developer:    Yulie Sandjojo/Mastersoft
 * Text Domain:  woocommerce-extension
 *
-* WC tested up to: 5.7.1
+* WC tested up to: 6.7.0
 *
-* Copyright:    @ 2018 Mastersoft
+* Copyright:    @ 2022 Mastersoft
 * License:      GNU General Public License v2.0 or later
 * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 **/
@@ -33,9 +33,9 @@ if (
 
 		function load_mastersoft_address_scripts() {
 			
-			wp_enqueue_script('mastersoft-woocommerce', 
-				plugins_url('js/mastersoft-woocommerce.js', __FILE__), 
-				array('jquery', 'jquery-ui-core', 'jquery-ui-autocomplete'));	
+			wp_enqueue_script('mastersoft-woocommerce', 				
+				plugins_url('js/mastersoft-woocommerce.js', __FILE__),
+				array('jquery'));	
 
 			// Retrieve NZ Regions defined in WooCommerce
 			$countries_obj = new WC_Countries();
@@ -55,8 +55,8 @@ if (
 			);
 		
 			wp_localize_script('mastersoft-woocommerce', 'php_vars', $dataToBePassed);
-			wp_enqueue_script('harmony', 'https://s3-ap-southeast-2.amazonaws.com/common.mastersoftgroup.com/scripts/harmony-current.min.js');
-			wp_enqueue_style('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css');
+			wp_enqueue_script('harmony', 'https://common.mastersoftgroup.com/scripts/harmony-2.1.0.min.js');
+			wp_enqueue_style('harmony', 'https://common.mastersoftgroup.com/scripts/harmony-2.1.0.min.css');
 		}
 	}	
 	
