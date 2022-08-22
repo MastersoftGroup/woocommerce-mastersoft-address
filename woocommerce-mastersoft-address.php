@@ -3,7 +3,7 @@
 * Plugin Name:  Mastersoft Address
 * Plugin URI:   https://github.com/MastersoftGroup/woocommerce-mastersoft-address
 * Description:  AU and NZ Address autocomplete plugin for WooCommerce Checkout and Account Addresses
-* Version:      1.1.0
+* Version:      1.1.1
 * Author:       Mastersoft
 * Author URI:   https://www.mastersoftgroup.com/
 * Developer:    Yulie Sandjojo/Mastersoft
