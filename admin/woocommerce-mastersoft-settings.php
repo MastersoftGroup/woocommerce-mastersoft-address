@@ -74,6 +74,13 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 					'id'		=> 'wc_mastersoft_settings_tab_url',
 					'default'	=> 'https://hosted.mastersoftgroup.com'
 				),
+				'widget_layout' => array(
+					'title'		=> __( 'Address layout options', 'woocommerce-mastersoft-settings-tab' ),
+					'type'      => 'textarea',
+					'desc'		=> __( 'Address layout options' ),
+					'id'		=> 'wc_mastersoft_settings_tab_widget_layout',
+					'default'   => ' { layout: "DEFAULT" }'
+				),
 				'widget_options' => array(
 					'title' 	=> __( 'Default Widget Options', 'woocommerce-mastersoft-settings-tab' ),
 					'type' 		=> 'textarea',

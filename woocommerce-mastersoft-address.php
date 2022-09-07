@@ -3,13 +3,13 @@
 * Plugin Name:  Mastersoft Address
 * Plugin URI:   https://github.com/MastersoftGroup/woocommerce-mastersoft-address
 * Description:  AU and NZ Address autocomplete plugin for WooCommerce Checkout and Account Addresses
-* Version:      1.1.1
+* Version:      1.2.0
 * Author:       Mastersoft
 * Author URI:   https://www.mastersoftgroup.com/
 * Developer:    Yulie Sandjojo/Mastersoft
 * Text Domain:  woocommerce-extension
 *
-* WC tested up to: 6.7.0
+* WC tested up to: 6.8.2
 *
 * Copyright:    @ 2022 Mastersoft
 * License:      GNU General Public License v2.0 or later
@@ -48,6 +48,7 @@ if (
 			$dataToBePassed = array(
 				'licenceKey' 		=> get_option('wc_mastersoft_settings_tab_licence_key'),
 				'url' 				=> get_option('wc_mastersoft_settings_tab_url'),
+				'widgetLayout'   => get_option('wc_mastersoft_settings_tab_widget_layout'),
 				'widgetOptions' 	=> get_option('wc_mastersoft_settings_tab_widget_options'),
 				'widgetOptionsAu' 	=> get_option('wc_mastersoft_settings_tab_widget_options_au'),
 				'widgetOptionsNz' 	=> get_option('wc_mastersoft_settings_tab_widget_options_nz'),
