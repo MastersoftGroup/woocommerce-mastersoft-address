@@ -3,7 +3,7 @@
 * Plugin Name:  Mastersoft Address
 * Plugin URI:   https://github.com/MastersoftGroup/woocommerce-mastersoft-address
 * Description:  AU and NZ Address autocomplete plugin for WooCommerce Checkout and Account Addresses
-* Version:      1.2.0
+* Version:      1.3.0
 * Author:       Mastersoft
 * Author URI:   https://www.mastersoftgroup.com/
 * Developer:    Yulie Sandjojo/Mastersoft
@@ -46,18 +46,19 @@ if (
 			}
 
 			$dataToBePassed = array(
-				'licenceKey' 		=> get_option('wc_mastersoft_settings_tab_licence_key'),
-				'url' 				=> get_option('wc_mastersoft_settings_tab_url'),
-				'widgetLayout'   => get_option('wc_mastersoft_settings_tab_widget_layout'),
-				'widgetOptions' 	=> get_option('wc_mastersoft_settings_tab_widget_options'),
-				'widgetOptionsAu' 	=> get_option('wc_mastersoft_settings_tab_widget_options_au'),
-				'widgetOptionsNz' 	=> get_option('wc_mastersoft_settings_tab_widget_options_nz'),
-				'nzRegionsValKey' 	=> array_flip($nz_regions)	
+				'licenceKey'          => get_option('wc_mastersoft_settings_tab_licence_key'),
+				'url'                 => get_option('wc_mastersoft_settings_tab_url'),
+				'widgetLayout'        => get_option('wc_mastersoft_settings_tab_widget_layout'),
+				'widgetOptions'       => get_option('wc_mastersoft_settings_tab_widget_options'),
+				'widgetOptionsAu'     => get_option('wc_mastersoft_settings_tab_widget_options_au'),
+				'widgetOptionsNz'     => get_option('wc_mastersoft_settings_tab_widget_options_nz'),
+				'widgetOptionsEmail'  => get_option('wc_mastersoft_settings_tab_widget_options_email'),
+				'nzRegionsValKey'     => array_flip($nz_regions)
 			);
 		
 			wp_localize_script('mastersoft-woocommerce', 'php_vars', $dataToBePassed);
-			wp_enqueue_script('harmony', 'https://common.mastersoftgroup.com/scripts/harmony-2.1.0.min.js');
-			wp_enqueue_style('harmony', 'https://common.mastersoftgroup.com/scripts/harmony-2.1.0.min.css');
+			wp_enqueue_script('harmony', 'https://common.mastersoftgroup.com/scripts/harmony-2.2.0.min.js');
+			wp_enqueue_style('harmony', 'https://common.mastersoftgroup.com/scripts/harmony-2.2.0.css');
 		}
 	}	
 	

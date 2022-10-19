@@ -79,29 +79,36 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 					'type'      => 'textarea',
 					'desc'		=> __( 'Address layout options' ),
 					'id'		=> 'wc_mastersoft_settings_tab_widget_layout',
-					'default'   => ' { layout: "DEFAULT" }'
+					'default'   => '{ "layout": "DEFAULT" }'
 				),
 				'widget_options' => array(
 					'title' 	=> __( 'Default Widget Options', 'woocommerce-mastersoft-settings-tab' ),
 					'type' 		=> 'textarea',
-					'desc'		=> __( 'Must be in valid JSON format - http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption. Preconfigured and default value: { singleLineHitNumber: 5, caseType: "TITLE" }.', 
+					'desc'		=> __( 'Must be in valid JSON format - http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption. Preconfigured and default value: { "singleLineHitNumber": 5, "caseType": "TITLE" }.', 
 									'woocommerce-mastersoft-settings-tab' ),
 					'id'		=> 'wc_mastersoft_settings_tab_widget_options',
-					'default'	=> '{ singleLineHitNumber: 5, caseType: "TITLE" }'
+					'default'	=> '{ "singleLineHitNumber": 5, "caseType": "TITLE" }'
 				),			
 				'widget_options_au' => array(
 					'title' 	=> __( 'Widget Options for AUSTRALIA', 'woocommerce-mastersoft-settings-tab' ),
 					'type' 		=> 'textarea',
-					'desc'		=> __( 'Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for AUSTRALIA. Preconfigured and default value: { sot: "GNAF" }.', 'woocommerce-mastersoft-settings-tab' ),
+					'desc'		=> __( 'Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for AUSTRALIA. Preconfigured and default value: { "sot": "GNAF" }.', 'woocommerce-mastersoft-settings-tab' ),
 					'id'		=> 'wc_mastersoft_settings_tab_widget_options_au',
-					'default'	=> '{ sot: "GNAF" }'
+					'default'	=> '{ "sot": "GNAF" }'
 				),
 				'widget_options_nz' => array(
 					'title' 	=> __( 'Widget Options for NEW ZEALAND', 'woocommerce-mastersoft-settings-tab' ),
 					'type' 		=> 'textarea',
-					'desc'		=> __( 'Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for NEW ZEALAND. Note: to populate the Region, sot must be "NZAD" and exposeAttributes must be "1". Preconfigured and default value: { sot: "NZAD", exposeAttributes: "1" }.', 'woocommerce-mastersoft-settings-tab' ),
+					'desc'		=> __( 'Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for NEW ZEALAND. Note: to populate the Region, sot must be "NZAD" and exposeAttributes must be "1". Preconfigured and default value: { "sot": "NZAD", "exposeAttributes": "1" }.', 'woocommerce-mastersoft-settings-tab' ),
 					'id'		=> 'wc_mastersoft_settings_tab_widget_options_nz',
-					'default'	=> '{ sot: "NZAD", exposeAttributes: "1" }'
+					'default'	=> '{ "sot": "NZAD", "exposeAttributes": "1" }'
+				),
+				'widget_options_email' => array(
+					'title'		=> __( 'Widget Options for email validation', 'woocommerce-mastersoft-settings-tab' ),
+					'type' 		=> 'textarea',
+					'desc'		=> __( 'Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for email validation. Preconfigured and default value: { "enabled": false, "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }.', 'woocommerce-mastersoft-settings-tab' ),
+					'id'		=> 'wc_mastersoft_settings_tab_widget_options_email',
+					'default'	=> '{ "enabled": false, "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }'
 				),
 				'section_end' => array(
 					'type' 		=> 'sectionend',
