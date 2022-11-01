@@ -103,12 +103,27 @@ if( ! class_exists( 'WC_Mastersoft_Settings_Tab' ) ) {
 					'id'		=> 'wc_mastersoft_settings_tab_widget_options_nz',
 					'default'	=> '{ "sot": "NZAD", "exposeAttributes": "1" }'
 				),
+				
+				'widget_options_email_enabled' => array(
+					'title'		=> __( 'Email validation', 'woocommerce-mastersoft-settings-tab' ),
+					'type' 		=> 'checkbox',
+					'desc'		=> __( 'Enables email validation.' ),
+					'id'		=> 'wc_mastersoft_settings_tab_widget_options_email_enabled',
+					'default'	=> 'no'
+				),
 				'widget_options_email' => array(
 					'title'		=> __( 'Widget Options for email validation', 'woocommerce-mastersoft-settings-tab' ),
 					'type' 		=> 'textarea',
-					'desc'		=> __( 'Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for email validation. Preconfigured and default value: { "enabled": false, "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }.', 'woocommerce-mastersoft-settings-tab' ),
+					'desc'		=> __( 'Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for email validation. Preconfigured and default value: { "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }.', 'woocommerce-mastersoft-settings-tab' ),
 					'id'		=> 'wc_mastersoft_settings_tab_widget_options_email',
-					'default'	=> '{ "enabled": false, "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }'
+					'default'	=> '{ "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }'
+				),
+				'widget_options_phone_enabled' => array(
+					'title'		=> __( 'Phone validation', 'woocommerce-mastersoft-settings-tab' ),
+					'type' 		=> 'checkbox',
+					'desc'		=> __( 'Enables phone validation.' ),
+					'id'		=> 'wc_mastersoft_settings_tab_widget_options_phone_enabled',
+					'default'	=> 'no'
 				),
 				'section_end' => array(
 					'type' 		=> 'sectionend',
