@@ -12,7 +12,7 @@ Features:
 * Only activated when the selected country is Australia or New Zealand
 * Settings for Mastersoft Address, such as Source of Truth
 
-Get started with a [FREE Trial licence key](https://hosted.mastersoftgroup.com/console/#/).
+Get started with a [FREE Trial licence key](https://www.loqate.com/anz/register/).
 
 ## Installation 
 
@@ -107,7 +107,7 @@ If there is an error message during the deleting process `Could not fully remove
 
 Log in to your WordPress Admin > go to `WooCommerce` > `Settings` > `Mastersoft Address` tab.
 
-* **Licence Key:** (mandatory). Get your [FREE Trial licence key](https://hosted.mastersoftgroup.com/console/#/). Must be in **username-without-domain:password** format. Default Value: blank/empty.
+* **Licence Key:** (mandatory). Get your [FREE Trial licence key](https://www.loqate.com/anz/register/). Must be in **username-without-domain:password** format. Default Value: blank/empty.
 * **URL:** Default value if empty/blank: `https://hosted.mastersoftgroup.com`.
 * **Default Widget Options:** Generic Widget Options for both AUSTRALIA and NEW ZEALAND. Pre-configured and default value:
 
@@ -124,7 +124,7 @@ Log in to your WordPress Admin > go to `WooCommerce` > `Settings` > `Mastersoft 
 ## Frequently Asked Questions
 
 ### How do I get a licence key?
-You can get a [FREE Trial licence key](https://hosted.mastersoftgroup.com/console/#/) and start using it right away.
+You can get a [FREE Trial licence key](https://www.loqate.com/anz/register/) and start using it right away.
 
 ### What are all available Widget Options to configure in the settings?
 Widget Options are basically `sot` for `Source of Truth` value and key value of `FeatureOptions`. 
@@ -152,8 +152,8 @@ The [release history](https://github.com/MastersoftGroup/woocommerce-mastersoft-
 ## Support
 If you have any questions or issues with this module, open an issue on [GitHub](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/issues). Alternatively you can contact us via e-mail or our website:
 
-<msg.support@gbgplc.com>  
+<customer.support@gbgplc.com>  
 <https://www.mastersoftgroup.com/>
 
 ## Copyright
-(c) 2022 Mastersoft
+(c) 2023 Mastersoft
