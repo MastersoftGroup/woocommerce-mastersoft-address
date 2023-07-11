@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin notices for Mastersoft Address.
+ * Admin notices for Loqate AU NZ Address.
  **/
 if (!class_exists('WC_Mastersoft_Admin_Notices')) {
 
@@ -26,7 +26,7 @@ if (!class_exists('WC_Mastersoft_Admin_Notices')) {
                     } else {
                         ?>
                         <div id="mastesoft_admin_notices" class="notice notice-success is-dismissible">
-                            <strong>Almost done!</strong> Configure <strong>Mastersoft Address</strong>
+                            <strong>Almost done!</strong> Configure <strong>Loqate AU NZ Address</strong>
                             <button class="button-primary" onclick="location.href='<?php echo $settings_url; ?>'" style="margin:10px;">
                                 Set up your account
                             </button>

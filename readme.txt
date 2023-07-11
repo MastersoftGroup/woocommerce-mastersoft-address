@@ -1,8 +1,8 @@
-=== WooCommerce Mastersoft Address ===
-Contributors: Mastersoft
+=== WooCommerce Loqate AU NZ Address ===
+Contributors: Loqate
 Tags: wordpress, woocommerce, wordpress plugin, woocommerce plugin, mastersoft, address, address validation, autocomplete, address autocomplete, checkout
 Requires at least: 4.6
-Tested up to: 4.9.8 (WooCommerce 3.4.5)
+Tested up to: 6.2.2 (WooCommerce 7.8.0)
 Stable tag: 1.0
 Requires PHP: 5.2.4
 License: GPLv2 or later
@@ -12,15 +12,15 @@ Australia and New Zealand Address Autocomplete plugin for WooCommerce Checkout a
 
 == Description ==
 
-Mastersoft Address Autocomplete plugin for WooCommerce.
+Loqate AU NZ Address Autocomplete plugin for WooCommerce.
 
 Features:
 * Autocomplete billing and shipping address in Checkout page
 * Autocomplete address in My Account page for Customer's billing address and shipping address
 * Only enabled when country is selected as Australia or New Zealand
-* Settings for Mastersoft Address, such as Source of Truth
+* Settings for Loqate AU NZ Address, such as Source of Truth
 
-Get started with a FREE Trial licence key [here](https://hosted.mastersoftgroup.com/console/#/).
+Get started with a FREE Trial licence key [here](https://www.loqate.com/anz/register/).
 
 == Installation ==
 
@@ -67,8 +67,8 @@ Under WordPress plugins directory, there should be `woocommerce-mastersoft-addre
 			    
 = Post installation =
 
-1. Activate plugin: go to `Plugins` page in your WordPress Admin > click `Activate` on `Mastersoft Address` plugin.
-1. Configure plugin in `Mastersoft Address` settings tab - see `Configuration` section for more detail.
+1. Activate plugin: go to `Plugins` page in your WordPress Admin > click `Activate` on `Loqate AU NZ Address` plugin.
+1. Configure plugin in `Loqate AU NZ Address` settings tab - see `Configuration` section for more detail.
 
 = Updating existing Composer installation =
 
@@ -79,7 +79,7 @@ Under WordPress plugins directory, there should be `woocommerce-mastersoft-addre
 
 = Configuration =
 
-Log in to your WordPress Admin > go to `WooCommerce` > `Settings` > `Mastersoft Address` tab.
+Log in to your WordPress Admin > go to `WooCommerce` > `Settings` > `Loqate AU NZ Address` tab. The information below may be changed from versions, please refer to the description in the actual setting page.
 
 * 	**Licence Key** (mandatory) 	
 	
@@ -137,7 +137,7 @@ You can get the full list of `FeatureOptions` [here](http://developer.mastersoft
 
 New Zealand Region will only be selected if Source of Truth is `NZAD` and `exposeAttributes` is turned on. 
 
-Go to `Mastersoft Address` WooCommerce Settings in your WordPress Admin and change `Widget Options for NEW ZEALAND` value to `{ sot: "NZAD", exposeAttributes: "1" }`. 
+Go to `Loqate AU NZ Address` WooCommerce Settings in your WordPress Admin and change `Widget Options for NEW ZEALAND` value to `{ sot: "NZAD", exposeAttributes: "1" }`. 
 
 = Where can I report bugs or have further questions to ask? =
 

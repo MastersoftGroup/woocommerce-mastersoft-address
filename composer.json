@@ -1,20 +1,21 @@
 {
 	"name": "mastersoft/woocommerce-mastersoft-address",
-  	"description": "A WooCommerce Address Autocomplete plugin for Checkout and Account Addresses",
+  	"description": "Performance checkout with Address lookup and validation, business lookup and validation, email and phone validation​",
   	"type": "wordpress-plugin",
-  	"version": "1.6.0",
+  	"version": "2.0.0",
   	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
-			"name": "Mastersoft",
-			"email": "support@mastersoftgroup.com",
-			"homepage": "https://www.mastersoftgroup.com/"
+			"name": "Loqate",
+			"email": "customer.support@gbgplc.com",
+			"homepage": "https://www.loqate.com/anz/"
 		}
 	],
 	"support": {
 		"issues": "https://github.com/MastersoftGroup/mastersoft-address-woocommerce/issues"
 	},
   	"keywords": [
+		"loqate",
   		"mastersoft", 
   		"wordpress", 
   		"woocommerce", 

@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name:  Mastersoft Address
+ * Plugin Name:  Loqate AU NZ Address
  * Plugin URI:   https://github.com/MastersoftGroup/woocommerce-mastersoft-address
- * Description:  AU and NZ Address autocomplete plugin for WooCommerce Checkout and Account Addresses
- * Version:      1.6.0
- * Author:       Mastersoft
- * Author URI:   https://www.mastersoftgroup.com/
+ * Description:  Performance checkout with Address lookup and validation, business lookup and validation, email and phone validation​
+ * Version:      2.0.0
+ * Author:       Loqate
+ * Author URI:   https://www.loqate.com/anz/
  * Developer:    Yulie Sandjojo/Mastersoft
  * Text Domain:  woocommerce-extension
  *
- * WC tested up to: 6.8.2
+ * WC tested up to: 7.8.0
  *
  * Copyright:    @ 2022 Mastersoft
  * License:      GNU General Public License v2.0 or later
@@ -50,7 +50,7 @@ if (
 
             $dataToBePassed = array(
                 'licenceKey'                        => get_option('wc_mastersoft_settings_tab_licence_key'),
-                'url'                               => get_option('wc_mastersoft_settings_tab_url'),
+                'url'                               => 'https://hosted.mastersoftgroup.com',
                 'widgetLayout'                      => get_option('wc_mastersoft_settings_tab_widget_layout'),
                 'widgetOptions'                     => get_option('wc_mastersoft_settings_tab_widget_options'),
                 'widgetOptionsAu'                   => get_option('wc_mastersoft_settings_tab_widget_options_au'),
@@ -81,15 +81,15 @@ if (
         include_once(plugin_dir_path(__FILE__) . 'admin/woocommerce-mastersoft-notices.php');
     }
 
-    // Add some links for Mastersoft Address plugin in WordPress Plugins page
+    // Add some links for Loqate AU NZ Address plugin in WordPress Plugins page
     function mastersoft_add_plugin_action_links($links)
     {
 
         // Add Docs link to GitHub URL
-        $docs_link = '<a href="https://github.com/MastersoftGroup/woocommerce-mastersoft-address" target="_blank">Docs</a>';
+        $docs_link = '<a href="https://docs.mastersoftgroup.com/loqate-harmony-api/integrations/woocommerce-plugin/woocommerce-user-guide" target="_blank">Docs</a>';
         array_unshift($links, $docs_link);
 
-        // Add Settings link to Mastersoft Address tab Settings
+        // Add Settings link to Loqate AU NZ Address tab Settings
         $url = get_admin_url() . 'admin.php?page=wc-settings&tab=mastersoft_settings_tab';
         $settings_link = '<a href="' . $url . '">' . __('Settings', 'textdomain') . '</a>';
         array_unshift($links, $settings_link);

@@ -1,6 +1,6 @@
 <?php
 /**
- * Woocommerce Settings for Mastersoft Address.
+ * Woocommerce Settings for Loqate AU NZ Address.
  **/
 if (!class_exists('WC_Mastersoft_Settings_Tab')) {
 
@@ -22,7 +22,7 @@ if (!class_exists('WC_Mastersoft_Settings_Tab')) {
          */
         public static function add_settings_tab($settings_tabs)
         {
-            $settings_tabs['mastersoft_settings_tab'] = __('Mastersoft Address', 'woocommerce-mastersoft-settings-tab');
+            $settings_tabs['mastersoft_settings_tab'] = __('Loqate AU NZ Address', 'woocommerce-mastersoft-settings-tab');
             return $settings_tabs;
         }
 
@@ -50,9 +50,9 @@ if (!class_exists('WC_Mastersoft_Settings_Tab')) {
             $settings = array(
                 //General/Address section
                 'section_title' => array(
-                    'title'       => __('Mastersoft Address', 'woocommerce-mastersoft-settings-tab'),
+                    'title'       => __('Loqate AU NZ Address', 'woocommerce-mastersoft-settings-tab'),
                     'type'        => 'title',
-                    'desc'        => 'Get started with a FREE Trial licence key - https://hosted.mastersoftgroup.com/console/#/.',
+                    'desc'        => 'Get started with a FREE Trial licence key - <a href="https://www.loqate.com/anz/register/" target="_blank">Register</a>.',
                     'id'          => 'wc_mastersoft_settings_tab_section_title'
                 ),
                 'console_button' => array(
@@ -64,7 +64,7 @@ if (!class_exists('WC_Mastersoft_Settings_Tab')) {
                     'id'          => 'wc_mastersoft_settings_tab_console_button',
                     'desc_tip'    => true,
                     'custom_attributes' => array(
-                        'onclick' => "window.open('https://hosted.mastersoftgroup.com/console/#/signUp', '_blank')"
+                        'onclick' => "window.open('https://hosted.mastersoftgroup.com/console/#/', '_blank')"
                     )
                 ),
                 'licence_key' => array(
@@ -74,40 +74,34 @@ if (!class_exists('WC_Mastersoft_Settings_Tab')) {
                     'id'          => 'wc_mastersoft_settings_tab_licence_key',
                     'placeholder' => 'Get your Licence Key'
                 ),
-                'url' => array(
-                    'title'       => __('URL', 'woocommerce-mastersoft-settings-tab'),
-                    'type'        => 'text',
-                    'desc'        => __('Default value if empty/blank: https://hosted.mastersoftgroup.com.', 'woocommerce-mastersoft-settings-tab'),
-                    'id'          => 'wc_mastersoft_settings_tab_url',
-                    'default'     => 'https://hosted.mastersoftgroup.com'
-                ),
                 'widget_layout' => array(
                     'title'       => __('Address Layout Options', 'woocommerce-mastersoft-settings-tab'),
                     'type'        => 'textarea',
-                    'desc'        => __('Address layout options. Must be in valid JSON format. Choose "OPTIMISED" layout to replace detailed address fields with single address line. Preconfigured and default value: { "layout": "DEFAULT" }.'),
+                    'desc'        => __('Address layout options. Must be in valid format. The preconfigured value is OPTIMISED. Options {"layout":"OPTIMISED"} or {"layout":"DEFAULT"}.'),
                     'id'          => 'wc_mastersoft_settings_tab_widget_layout',
-                    'default'     => '{ "layout": "DEFAULT" }'
+                    'default'     => '{ "layout": "OPTIMISED" }'
                 ),
                 'widget_options' => array(
-                    'title'       => __('Default Widget Options', 'woocommerce-mastersoft-settings-tab'),
+                    'title'       => __('Address FeatureOptions', 'woocommerce-mastersoft-settings-tab'),
                     'type'        => 'textarea',
-                    'desc'        => __('Must be in valid JSON format - http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption. Preconfigured and default value: { "singleLineHitNumber": 5, "caseType": "TITLE" }.', 'woocommerce-mastersoft-settings-tab'),
+                    'desc'        => __('Must be in valid format. The preconfigured value is { "singleLineHitNumber": 5, "caseType": "TITLE", "displayGnafLot":1,"suppressLot":1}. '.
+                                        'Further documentation <a href="https://docs.mastersoftgroup.com/loqate-harmony-api/api-specification/address/address-validation-and-lookup#request" target="_blank">Here</a>.', 'woocommerce-mastersoft-settings-tab'),
                     'id'          => 'wc_mastersoft_settings_tab_widget_options',
-                    'default'     => '{ "singleLineHitNumber": 5, "caseType": "TITLE" }'
+                    'default'     => '{ "singleLineHitNumber": 5, "caseType": "TITLE", "displayGnafLot":1,"suppressLot":1 }'
                 ),
                 'widget_options_au' => array(
-                    'title'       => __('Widget Options for AUSTRALIA', 'woocommerce-mastersoft-settings-tab'),
+                    'title'       => __('Address Data Australia', 'woocommerce-mastersoft-settings-tab'),
                     'type'        => 'textarea',
-                    'desc'        => __('Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for AUSTRALIA. Preconfigured and default value: { "sot": "GNAF" }.', 'woocommerce-mastersoft-settings-tab'),
+                    'desc'        => __('Must be in valid format. The preconfigured value is {"sot":"GNAF"}. Options {"sot":"AUPAF"} , {"sot":"AUSOTS"} .', 'woocommerce-mastersoft-settings-tab'),
                     'id'          => 'wc_mastersoft_settings_tab_widget_options_au',
                     'default'     => '{ "sot": "GNAF" }'
                 ),
                 'widget_options_nz' => array(
                     'type'        => 'textarea',
-                    'title'       => __('Widget Options for NEW ZEALAND', 'woocommerce-mastersoft-settings-tab'),
-                    'desc'        => __('Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for NEW ZEALAND. Note: to populate the Region, sot must be "NZAD" and exposeAttributes must be "1". Preconfigured and default value: { "sot": "NZAD", "exposeAttributes": "1" }.', 'woocommerce-mastersoft-settings-tab'),
+                    'title'       => __('Address Data New Zealand', 'woocommerce-mastersoft-settings-tab'),
+                    'desc'        => __('Must be in valid format. The preconfigured value is {"sot":"NZPAF"}. Options {"sot":"NZAD", "exposeAttributes":"1"} , {"sot":"CNAR"}.', 'woocommerce-mastersoft-settings-tab'),
                     'id'          => 'wc_mastersoft_settings_tab_widget_options_nz',
-                    'default'     => '{ "sot": "NZAD", "exposeAttributes": "1" }'
+                    'default'     => '{ "sot": "NZPAF" }'
                 ),
                 'widget_options_enhanced_state' => array(
                     'title'      => __('Enhanced State/County/Region', 'woocommerce-mastersoft-settings-tab'),
@@ -136,7 +130,10 @@ if (!class_exists('WC_Mastersoft_Settings_Tab')) {
                 'widget_options_business' => array(
                     'title'      => __('Widget Options for Business Lookup', 'woocommerce-mastersoft-settings-tab'),
                     'type'       => 'textarea',
-                    'desc'       => __('Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for Business Lookup. Preconfigured and default value: { "caseType": "TITLE", "hits": 5, "taxStatus": "", "bnStatus": "", "state": ["NSW","VIC","QLD","ACT","SA","WA","NT"], "nameTypes": ["MN","BN","TRD","OTN","LGL","DGR"] }', 'woocommerce-mastersoft-settings-tab'),
+                    'desc'       => __('Must be in valid format. The preconfigured value is ​'.
+                                    '{ "caseType": "TITLE", "hits": 5, "taxStatus": "", "bnStatus": "", "state": ["NSW","VIC","QLD","ACT","SA","WA","NT"], "nameTypes": ["MN","BN","TRD","OTN","LGL","DGR"] }. '.
+                                    'Note: state only applicable for au business lookup, it will be ignored for other countries. '.
+                                    'Further documentation <a href="https://docs.mastersoftgroup.com/loqate-harmony-api/api-specification/business-validation" target="_blank">Here</a>.', 'woocommerce-mastersoft-settings-tab'),
                     'id'         => 'wc_mastersoft_settings_tab_widget_options_business',
                     'default'    => '{ "caseType": "TITLE", "hits": 5, "taxStatus": "", "bnStatus": "", "state": ["NSW","VIC","QLD","ACT","SA","WA","NT"], "nameTypes": ["MN","BN","TRD","OTN","LGL","DGR"] }'
                 ),
@@ -167,7 +164,8 @@ if (!class_exists('WC_Mastersoft_Settings_Tab')) {
                 'widget_options_email' => array(
                     'title'      => __('Widget Options for Email Validation', 'woocommerce-mastersoft-settings-tab'),
                     'type'       => 'textarea',
-                    'desc'       => __('Must be in valid JSON format. If the same key is in the Default Widget Options, the value here will take precedence for email validation. Preconfigured and default value: { "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }.', 'woocommerce-mastersoft-settings-tab'),
+                    'desc'       => __('Must be in valid format. The preconfigured value is { "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }. '.
+                                  'Further documentation <a href="https://docs.mastersoftgroup.com/loqate-harmony-api/api-specification/email-validation" target="_blank">Here</a>.​', 'woocommerce-mastersoft-settings-tab'),
                     'id'         => 'wc_mastersoft_settings_tab_widget_options_email',
                     'default'    => '{ "sot": "VE_ALL", "options": [ "FORMAT", "BLOCKLIST", "DOMAIN", "MAILSERVER", "MAILBOX" ] }'
                 ),
