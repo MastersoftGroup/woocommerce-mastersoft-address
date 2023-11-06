@@ -1,6 +1,6 @@
 # mastersoft-address-woocommerce
 
-Mastersoft Address Autocomplete plugin for WooCommerce.
+Loqate AU NZ Address Autocomplete plugin for WooCommerce.
 
 ## Description
 
