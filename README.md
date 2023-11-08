@@ -2,17 +2,21 @@
 
 Loqate AU NZ Address Autocomplete plugin for WooCommerce.
 
-For the up to date user guide pelase visit https://docs.mastersoftgroup.com/loqate-harmony-api/integrations/woocommerce-plugin/woocommerce-user-guide
+Performance Address lookup and validation for WooCommerce Checkout and Account Billing and Shipping Addresses, as well as checkout with Address lookup and validation, business lookup and validation, email and phone validation​
+
+
+For the up to date user guide please visit https://docs.mastersoftgroup.com/loqate-harmony-api/integrations/woocommerce-plugin/woocommerce-user-guide
 
 ## Description
 
-Australia and New Zealand Address Autocomplete plugin for WooCommerce Checkout and Account Billing and Shipping Addresses.
+Turns your checkout into a performance checkout by saving the customer time in checkout, reduces failed deliveries, reduces failed contacts and builds trust. Powered by the most curated address and location data in the world.
+Loqate is the most advanced software for capturing, verifying and enriching address data globally - delivering the unrivalled precision businesses need.
 
 Features:
-* Autocomplete billing and shipping address in Checkout page
+* Autocomplete billing and shipping address, business lookup, email and phone validation in Checkout page
 * Autocomplete address in My Account page for Customer's billing address and shipping address
-* Only activated when the selected country is Australia or New Zealand
-* Settings for Mastersoft Address, such as Source of Truth
+* Support for over 245 countries addresses, including AU, NZ, US, UK, CA etc
+* Flexible configurations for the lookup and validation depending on the business needs.
 
 Get started with a [FREE Trial licence key](https://www.loqate.com/anz/register/).
 
