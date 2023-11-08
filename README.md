@@ -4,7 +4,6 @@ Loqate AU NZ Address Autocomplete plugin for WooCommerce.
 
 Performance Address lookup and validation for WooCommerce Checkout and Account Billing and Shipping Addresses, as well as checkout with Address lookup and validation, business lookup and validation, email and phone validation​
 
-
 For the up to date user guide please visit https://docs.mastersoftgroup.com/loqate-harmony-api/integrations/woocommerce-plugin/woocommerce-user-guide
 
 ## Description
