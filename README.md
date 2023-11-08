@@ -2,15 +2,20 @@
 
 Loqate AU NZ Address Autocomplete plugin for WooCommerce.
 
+Performance Address lookup and validation for WooCommerce Checkout and Account Billing and Shipping Addresses, as well as checkout with Address lookup and validation, business lookup and validation, email and phone validation​
+
+For the up to date user guide please visit https://docs.mastersoftgroup.com/loqate-harmony-api/integrations/woocommerce-plugin/woocommerce-user-guide
+
 ## Description
 
-Australia and New Zealand Address Autocomplete plugin for WooCommerce Checkout and Account Billing and Shipping Addresses.
+Turns your checkout into a performance checkout by saving the customer time in checkout, reduces failed deliveries, reduces failed contacts and builds trust. Powered by the most curated address and location data in the world.
+Loqate is the most advanced software for capturing, verifying and enriching address data globally - delivering the unrivalled precision businesses need.
 
 Features:
-* Autocomplete billing and shipping address in Checkout page
+* Autocomplete billing and shipping address, business lookup, email and phone validation in Checkout page
 * Autocomplete address in My Account page for Customer's billing address and shipping address
-* Only activated when the selected country is Australia or New Zealand
-* Settings for Mastersoft Address, such as Source of Truth
+* Support for over 245 countries addresses, including AU, NZ, US, UK, CA etc
+* Flexible configurations for the lookup and validation depending on the business needs.
 
 Get started with a [FREE Trial licence key](https://www.loqate.com/anz/register/).
 
@@ -119,7 +124,7 @@ Log in to your WordPress Admin > go to `WooCommerce` > `Settings` > `Mastersoft 
 
     `{ sot: "NZAD", exposeAttributes: "1" }`.
 
-    All Widget Options must be in valid JSON format. Here is the full list of available [Feature Options](http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption).
+    All Widget Options must be in valid JSON format. Here is the full list of available [Feature Options](https://docs.mastersoftgroup.com/loqate-harmony-api/api-specification/objects/address-objects#featureoption).
 
 ## Frequently Asked Questions
 
@@ -131,7 +136,7 @@ Widget Options are basically `sot` for `Source of Truth` value and key value of 
 
 Currently these Source of Truth are available for AUSTRALIA: `AUPAF`, `GNAF` and for NEW ZEALAND: `NZPAF`, `NZAD`.
 
-Here is the full list of [Feature Options](http://developer.mastersoftgroup.com/harmony/api/object/address.html#FeatureOption).
+Here is the full list of [Feature Options](https://docs.mastersoftgroup.com/loqate-harmony-api/api-specification/objects/address-objects#featureoption).
 
 ### Why the Region for New Zealand is not auto-selected after selecting an address?
 New Zealand Region will only be selected if Source of Truth is `NZAD` and `exposeAttributes` is turned on. 
@@ -141,19 +146,18 @@ Go to `Mastersoft Address` WooCommerce Settings in your WordPress Admin and chan
 ### Where can I report bugs or ask further questions?
 Any questions or bugs can be reported either by opening an issue on [Mastersoft GitHub](https://github.com/MastersoftGroup/mastersoft-address-woocommerce/issues). 
 
-Alternatively, you can contact us via e-mail to <support@mastersoftgroup.com> or via our website <https://www.mastersoftgroup.com/>.
+Alternatively, you can contact us via our website <https://www.loqate.com/anz/contact/customer-support/>.
 
 ### Where can I find the REST API documentation?
-You can find the documentation of our REST API [here](http://developer.mastersoftgroup.com/harmony/api/).
+You can find the documentation of our REST API [here](https://docs.mastersoftgroup.com/loqate-harmony-api/api-specification).
 
 ## Changelog
 The [release history](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/releases) is available on GitHub.
 
 ## Support
-If you have any questions or issues with this module, open an issue on [GitHub](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/issues). Alternatively you can contact us via e-mail or our website:
+If you have any questions or issues with this module, open an issue on [GitHub](https://github.com/MastersoftGroup/woocommerce-mastersoft-address/issues). Alternatively you can contact us via our website:
 
-<customer.support@gbgplc.com>  
-<https://www.mastersoftgroup.com/>
+<https://www.loqate.com/anz/contact/customer-support/>
 
 ## Copyright
 (c) 2023 Mastersoft
